@@ -1,0 +1,13 @@
+<div class="search">Input avec recherche de pays : </div>
+<input type="text"
+    #input
+    [(ngModel)]="searchText" 
+    (focus)="OnFocus($event)" 
+    (blur)="onBlur()" 
+    (keyup)="OnFocus($event)">
+    
+<ul *ngIf="showList" class="list">
+    <li *ngFor="let country of filteredCountries"  (click)="selectCountry(country)">
+        {{ country.name }}
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid gray;
+    width: 16%;
+    position: absolute;
+    top: 6%;
+    cursor: pointer
+}
+
+.list > li {
+    padding: 5px 5px;
+}
+
+.list > li:hover {
+    background-color:lightgray;
+}
+
+.list > li:not(:first-child){
+    border-top: 1px solid gray;
+}
